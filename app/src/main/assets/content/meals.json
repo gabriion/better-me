@@ -1,142 +1,469 @@
 [
   {
     "id": "meal_0",
-    "name": "Eggs bowl",
+    "name": "Eggs & spinach oats",
     "slot": "breakfast",
     "ingredients": [
       "eggs",
-      "olive oil",
-      "salt"
-    ],
-    "kcal": 350,
-    "protein_g": 25,
-    "carbs_g": 30,
-    "fat_g": 12
-  },
-  {
-    "id": "meal_1",
-    "name": "Chicken bowl",
-    "slot": "lunch",
-    "ingredients": [
-      "chicken",
-      "olive oil",
-      "salt"
-    ],
-    "kcal": 400,
-    "protein_g": 25,
-    "carbs_g": 30,
-    "fat_g": 12
-  },
-  {
-    "id": "meal_2",
-    "name": "Fish bowl",
-    "slot": "dinner",
-    "ingredients": [
-      "fish",
-      "olive oil",
-      "salt"
-    ],
-    "kcal": 450,
-    "protein_g": 25,
-    "carbs_g": 30,
-    "fat_g": 12
-  },
-  {
-    "id": "meal_3",
-    "name": "Rice bowl",
-    "slot": "snack",
-    "ingredients": [
-      "rice",
-      "olive oil",
-      "salt"
-    ],
-    "kcal": 500,
-    "protein_g": 25,
-    "carbs_g": 30,
-    "fat_g": 12
-  },
-  {
-    "id": "meal_4",
-    "name": "Broccoli bowl",
-    "slot": "breakfast",
-    "ingredients": [
-      "broccoli",
-      "olive oil",
-      "salt"
-    ],
-    "kcal": 550,
-    "protein_g": 25,
-    "carbs_g": 30,
-    "fat_g": 12
-  },
-  {
-    "id": "meal_5",
-    "name": "Spinach bowl",
-    "slot": "lunch",
-    "ingredients": [
+      "oats",
       "spinach",
       "olive oil",
       "salt"
     ],
-    "kcal": 350,
-    "protein_g": 25,
-    "carbs_g": 30,
-    "fat_g": 12
+    "kcal": 420,
+    "protein_g": 28,
+    "carbs_g": 45,
+    "fat_g": 14
   },
   {
-    "id": "meal_6",
-    "name": "Potato bowl",
-    "slot": "dinner",
-    "ingredients": [
-      "potato",
-      "olive oil",
-      "salt"
-    ],
-    "kcal": 400,
-    "protein_g": 25,
-    "carbs_g": 30,
-    "fat_g": 12
-  },
-  {
-    "id": "meal_7",
-    "name": "Yogurt bowl",
-    "slot": "snack",
+    "id": "meal_1",
+    "name": "Yogurt oats bowl",
+    "slot": "breakfast",
     "ingredients": [
       "yogurt",
+      "oats",
       "olive oil",
       "salt"
     ],
-    "kcal": 450,
-    "protein_g": 25,
-    "carbs_g": 30,
-    "fat_g": 12
+    "kcal": 360,
+    "protein_g": 22,
+    "carbs_g": 50,
+    "fat_g": 8
   },
   {
-    "id": "meal_8",
-    "name": "Oats bowl",
+    "id": "meal_2",
+    "name": "Eggs, potato & peppers hash",
+    "slot": "breakfast",
+    "ingredients": [
+      "eggs",
+      "potato",
+      "peppers",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 480,
+    "protein_g": 26,
+    "carbs_g": 40,
+    "fat_g": 22
+  },
+  {
+    "id": "meal_3",
+    "name": "Yogurt & cucumber plate",
+    "slot": "breakfast",
+    "ingredients": [
+      "yogurt",
+      "cucumber",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 260,
+    "protein_g": 18,
+    "carbs_g": 18,
+    "fat_g": 10
+  },
+  {
+    "id": "meal_4",
+    "name": "Eggs with tomato",
+    "slot": "breakfast",
+    "ingredients": [
+      "eggs",
+      "tomato",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 320,
+    "protein_g": 22,
+    "carbs_g": 8,
+    "fat_g": 22
+  },
+  {
+    "id": "meal_5",
+    "name": "Classic oats porridge",
     "slot": "breakfast",
     "ingredients": [
       "oats",
       "olive oil",
       "salt"
     ],
+    "kcal": 300,
+    "protein_g": 12,
+    "carbs_g": 55,
+    "fat_g": 6
+  },
+  {
+    "id": "meal_6",
+    "name": "Chicken, rice & broccoli",
+    "slot": "lunch",
+    "ingredients": [
+      "chicken",
+      "rice",
+      "broccoli",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 560,
+    "protein_g": 42,
+    "carbs_g": 60,
+    "fat_g": 14
+  },
+  {
+    "id": "meal_7",
+    "name": "Chicken quinoa salad",
+    "slot": "lunch",
+    "ingredients": [
+      "chicken",
+      "quinoa",
+      "spinach",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 520,
+    "protein_g": 40,
+    "carbs_g": 50,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_8",
+    "name": "Tuna rice bowl",
+    "slot": "lunch",
+    "ingredients": [
+      "tuna",
+      "rice",
+      "cucumber",
+      "olive oil",
+      "salt"
+    ],
     "kcal": 500,
-    "protein_g": 25,
-    "carbs_g": 30,
+    "protein_g": 36,
+    "carbs_g": 55,
     "fat_g": 12
   },
   {
     "id": "meal_9",
-    "name": "Tuna bowl",
+    "name": "Tuna & tomato salad",
     "slot": "lunch",
     "ingredients": [
       "tuna",
+      "tomato",
       "olive oil",
       "salt"
     ],
-    "kcal": 550,
-    "protein_g": 25,
+    "kcal": 340,
+    "protein_g": 32,
+    "carbs_g": 12,
+    "fat_g": 18
+  },
+  {
+    "id": "meal_10",
+    "name": "Chicken with potato & peppers",
+    "slot": "lunch",
+    "ingredients": [
+      "chicken",
+      "potato",
+      "peppers",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 600,
+    "protein_g": 44,
+    "carbs_g": 55,
+    "fat_g": 20
+  },
+  {
+    "id": "meal_11",
+    "name": "Fish quinoa plate",
+    "slot": "lunch",
+    "ingredients": [
+      "fish",
+      "quinoa",
+      "broccoli",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 540,
+    "protein_g": 38,
+    "carbs_g": 48,
+    "fat_g": 18
+  },
+  {
+    "id": "meal_12",
+    "name": "Egg fried rice with spinach",
+    "slot": "lunch",
+    "ingredients": [
+      "eggs",
+      "rice",
+      "spinach",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 470,
+    "protein_g": 24,
+    "carbs_g": 55,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_13",
+    "name": "Chicken pepper rice",
+    "slot": "lunch",
+    "ingredients": [
+      "chicken",
+      "rice",
+      "peppers",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 580,
+    "protein_g": 42,
+    "carbs_g": 60,
+    "fat_g": 18
+  },
+  {
+    "id": "meal_14",
+    "name": "Tuna quinoa spinach bowl",
+    "slot": "lunch",
+    "ingredients": [
+      "tuna",
+      "quinoa",
+      "spinach",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 510,
+    "protein_g": 38,
+    "carbs_g": 45,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_15",
+    "name": "Chicken tomato salad",
+    "slot": "lunch",
+    "ingredients": [
+      "chicken",
+      "tomato",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 380,
+    "protein_g": 40,
+    "carbs_g": 12,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_16",
+    "name": "Baked fish, potato & broccoli",
+    "slot": "dinner",
+    "ingredients": [
+      "fish",
+      "potato",
+      "broccoli",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 560,
+    "protein_g": 38,
+    "carbs_g": 50,
+    "fat_g": 20
+  },
+  {
+    "id": "meal_17",
+    "name": "Chicken, potato & spinach",
+    "slot": "dinner",
+    "ingredients": [
+      "chicken",
+      "potato",
+      "spinach",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 610,
+    "protein_g": 44,
+    "carbs_g": 55,
+    "fat_g": 22
+  },
+  {
+    "id": "meal_18",
+    "name": "Fish rice spinach plate",
+    "slot": "dinner",
+    "ingredients": [
+      "fish",
+      "rice",
+      "spinach",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 520,
+    "protein_g": 36,
+    "carbs_g": 55,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_19",
+    "name": "Chicken quinoa broccoli",
+    "slot": "dinner",
+    "ingredients": [
+      "chicken",
+      "quinoa",
+      "broccoli",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 540,
+    "protein_g": 42,
+    "carbs_g": 50,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_20",
+    "name": "Tuna potato pepper bake",
+    "slot": "dinner",
+    "ingredients": [
+      "tuna",
+      "potato",
+      "peppers",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 500,
+    "protein_g": 34,
+    "carbs_g": 50,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_21",
+    "name": "Eggs, potato & broccoli",
+    "slot": "dinner",
+    "ingredients": [
+      "eggs",
+      "potato",
+      "broccoli",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 470,
+    "protein_g": 26,
+    "carbs_g": 50,
+    "fat_g": 18
+  },
+  {
+    "id": "meal_22",
+    "name": "Fish quinoa tomato bowl",
+    "slot": "dinner",
+    "ingredients": [
+      "fish",
+      "quinoa",
+      "tomato",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 530,
+    "protein_g": 36,
+    "carbs_g": 50,
+    "fat_g": 18
+  },
+  {
+    "id": "meal_23",
+    "name": "Chicken rice & spinach",
+    "slot": "dinner",
+    "ingredients": [
+      "chicken",
+      "rice",
+      "spinach",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 580,
+    "protein_g": 44,
+    "carbs_g": 60,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_24",
+    "name": "Tuna rice broccoli",
+    "slot": "dinner",
+    "ingredients": [
+      "tuna",
+      "rice",
+      "broccoli",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 490,
+    "protein_g": 34,
+    "carbs_g": 55,
+    "fat_g": 14
+  },
+  {
+    "id": "meal_25",
+    "name": "Fish, potato & peppers",
+    "slot": "dinner",
+    "ingredients": [
+      "fish",
+      "potato",
+      "peppers",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 520,
+    "protein_g": 36,
+    "carbs_g": 50,
+    "fat_g": 18
+  },
+  {
+    "id": "meal_26",
+    "name": "Greek yogurt cup",
+    "slot": "snack",
+    "ingredients": [
+      "yogurt",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 200,
+    "protein_g": 18,
+    "carbs_g": 14,
+    "fat_g": 6
+  },
+  {
+    "id": "meal_27",
+    "name": "Tuna cucumber bites",
+    "slot": "snack",
+    "ingredients": [
+      "tuna",
+      "cucumber",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 240,
+    "protein_g": 26,
+    "carbs_g": 6,
+    "fat_g": 10
+  },
+  {
+    "id": "meal_28",
+    "name": "Two boiled eggs",
+    "slot": "snack",
+    "ingredients": [
+      "eggs",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 220,
+    "protein_g": 18,
+    "carbs_g": 2,
+    "fat_g": 16
+  },
+  {
+    "id": "meal_29",
+    "name": "Yogurt & oats snack",
+    "slot": "snack",
+    "ingredients": [
+      "yogurt",
+      "oats",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 280,
+    "protein_g": 14,
     "carbs_g": 30,
-    "fat_g": 12
+    "fat_g": 8
   }
 ]

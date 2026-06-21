@@ -1,0 +1,12 @@
+[
+  {"title": "Read 12 books", "type": "COUNT", "target": 12, "unit": "books", "isSportTracked": false},
+  {"title": "Learn 500 new words", "type": "COUNT", "target": 500, "unit": "words", "isSportTracked": false},
+  {"title": "Meditate 30 days in a row", "type": "FREQUENCY_DAYS", "target": 30, "unit": "days", "isSportTracked": false},
+  {"title": "Run 200 km this quarter", "type": "DISTANCE_KM", "target": 200, "unit": "km", "isSportTracked": true},
+  {"title": "Cycle 500 km", "type": "DISTANCE_KM", "target": 500, "unit": "km", "isSportTracked": true},
+  {"title": "Gym 3x per week (12 weeks)", "type": "FREQUENCY_DAYS", "target": 36, "unit": "sessions", "isSportTracked": false},
+  {"title": "Sleep 7+ hours for 60 nights", "type": "FREQUENCY_DAYS", "target": 60, "unit": "nights", "isSportTracked": false},
+  {"title": "Journal every day for 90 days", "type": "FREQUENCY_DAYS", "target": 90, "unit": "days", "isSportTracked": false},
+  {"title": "Reach 75 kg", "type": "WEIGHT_KG", "target": 75, "unit": "kg", "isSportTracked": false},
+  {"title": "Walk 600 minutes this month", "type": "DURATION_MIN", "target": 600, "unit": "min", "isSportTracked": true}
+]

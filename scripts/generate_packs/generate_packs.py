@@ -63,17 +63,64 @@ def stub_exercises() -> list[dict]:
 
 
 def stub_meals() -> list[dict]:
-    base = ["eggs", "chicken", "fish", "rice", "broccoli", "spinach", "potato", "yogurt", "oats", "tuna"]
-    slots = ["breakfast", "lunch", "dinner", "snack"]
-    out = []
-    for i, ing in enumerate(base):
+    """Deterministic ~30-meal pack mixing proteins, carbs and vegetables.
+
+    Slot distribution (target): 6 breakfast, 10 lunch, 10 dinner, 4 snack.
+    Kcal ranges 200..650 depending on slot to feel realistic.
+    """
+    # (slot, protein, carb_or_base, veg_or_extra, name_template, kcal, p, c, f)
+    recipes: list[tuple] = [
+        # --- breakfast (6) ---
+        ("breakfast", "eggs",   "oats",     "spinach",   "Eggs & spinach oats",        420, 28, 45, 14),
+        ("breakfast", "yogurt", "oats",     None,        "Yogurt oats bowl",           360, 22, 50, 8),
+        ("breakfast", "eggs",   "potato",   "peppers",   "Eggs, potato & peppers hash",480, 26, 40, 22),
+        ("breakfast", "yogurt", None,       "cucumber",  "Yogurt & cucumber plate",    260, 18, 18, 10),
+        ("breakfast", "eggs",   None,       "tomato",    "Eggs with tomato",           320, 22, 8,  22),
+        ("breakfast", "oats",   None,       None,        "Classic oats porridge",      300, 12, 55, 6),
+        # --- lunch (10) ---
+        ("lunch",     "chicken","rice",     "broccoli",  "Chicken, rice & broccoli",   560, 42, 60, 14),
+        ("lunch",     "chicken","quinoa",   "spinach",   "Chicken quinoa salad",       520, 40, 50, 16),
+        ("lunch",     "tuna",   "rice",     "cucumber",  "Tuna rice bowl",             500, 36, 55, 12),
+        ("lunch",     "tuna",   None,       "tomato",    "Tuna & tomato salad",        340, 32, 12, 18),
+        ("lunch",     "chicken","potato",   "peppers",   "Chicken with potato & peppers",600,44, 55, 20),
+        ("lunch",     "fish",   "quinoa",   "broccoli",  "Fish quinoa plate",          540, 38, 48, 18),
+        ("lunch",     "eggs",   "rice",     "spinach",   "Egg fried rice with spinach",470, 24, 55, 16),
+        ("lunch",     "chicken","rice",     "peppers",   "Chicken pepper rice",        580, 42, 60, 18),
+        ("lunch",     "tuna",   "quinoa",   "spinach",   "Tuna quinoa spinach bowl",   510, 38, 45, 16),
+        ("lunch",     "chicken",None,       "tomato",    "Chicken tomato salad",       380, 40, 12, 16),
+        # --- dinner (10) ---
+        ("dinner",    "fish",   "potato",   "broccoli",  "Baked fish, potato & broccoli",560,38, 50, 20),
+        ("dinner",    "chicken","potato",   "spinach",   "Chicken, potato & spinach",  610, 44, 55, 22),
+        ("dinner",    "fish",   "rice",     "spinach",   "Fish rice spinach plate",    520, 36, 55, 16),
+        ("dinner",    "chicken","quinoa",   "broccoli",  "Chicken quinoa broccoli",    540, 42, 50, 16),
+        ("dinner",    "tuna",   "potato",   "peppers",   "Tuna potato pepper bake",    500, 34, 50, 16),
+        ("dinner",    "eggs",   "potato",   "broccoli",  "Eggs, potato & broccoli",    470, 26, 50, 18),
+        ("dinner",    "fish",   "quinoa",   "tomato",    "Fish quinoa tomato bowl",    530, 36, 50, 18),
+        ("dinner",    "chicken","rice",     "spinach",   "Chicken rice & spinach",     580, 44, 60, 16),
+        ("dinner",    "tuna",   "rice",     "broccoli",  "Tuna rice broccoli",         490, 34, 55, 14),
+        ("dinner",    "fish",   "potato",   "peppers",   "Fish, potato & peppers",     520, 36, 50, 18),
+        # --- snack (4) ---
+        ("snack",     "yogurt", None,       None,        "Greek yogurt cup",           200, 18, 14, 6),
+        ("snack",     "tuna",   None,       "cucumber",  "Tuna cucumber bites",        240, 26, 6,  10),
+        ("snack",     "eggs",   None,       None,        "Two boiled eggs",            220, 18, 2,  16),
+        ("snack",     "yogurt", "oats",     None,        "Yogurt & oats snack",        280, 14, 30, 8),
+    ]
+
+    out: list[dict] = []
+    for i, (slot, protein, carb, veg, name, kcal, p, c, f) in enumerate(recipes):
+        ings: list[str] = []
+        for x in (protein, carb, veg):
+            if x and x not in ings:
+                ings.append(x)
+        # pantry staples — repo strips these out for the ingredient cloud
+        ings += ["olive oil", "salt"]
         out.append({
             "id": f"meal_{i}",
-            "name": f"{ing.title()} bowl",
-            "slot": slots[i % len(slots)],
-            "ingredients": [ing, "olive oil", "salt"],
-            "kcal": 350 + 50 * (i % 5),
-            "protein_g": 25, "carbs_g": 30, "fat_g": 12,
+            "name": name,
+            "slot": slot,
+            "ingredients": ings,
+            "kcal": kcal,
+            "protein_g": p, "carbs_g": c, "fat_g": f,
         })
     return out
 

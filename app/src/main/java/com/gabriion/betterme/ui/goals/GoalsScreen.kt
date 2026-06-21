@@ -230,7 +230,7 @@ private fun AddGoalSheet(
                     trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = typeExpanded) },
                     modifier = Modifier.fillMaxWidth().menuAnchor()
                 )
-                androidx.compose.material3.ExposedDropdownMenu(
+                androidx.compose.material3.DropdownMenu(
                     expanded = typeExpanded,
                     onDismissRequest = { typeExpanded = false }
                 ) {

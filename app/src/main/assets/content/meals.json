@@ -1,0 +1,142 @@
+[
+  {
+    "id": "meal_0",
+    "name": "Eggs bowl",
+    "slot": "breakfast",
+    "ingredients": [
+      "eggs",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 350,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_1",
+    "name": "Chicken bowl",
+    "slot": "lunch",
+    "ingredients": [
+      "chicken",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 400,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_2",
+    "name": "Fish bowl",
+    "slot": "dinner",
+    "ingredients": [
+      "fish",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 450,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_3",
+    "name": "Rice bowl",
+    "slot": "snack",
+    "ingredients": [
+      "rice",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 500,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_4",
+    "name": "Broccoli bowl",
+    "slot": "breakfast",
+    "ingredients": [
+      "broccoli",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 550,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_5",
+    "name": "Spinach bowl",
+    "slot": "lunch",
+    "ingredients": [
+      "spinach",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 350,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_6",
+    "name": "Potato bowl",
+    "slot": "dinner",
+    "ingredients": [
+      "potato",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 400,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_7",
+    "name": "Yogurt bowl",
+    "slot": "snack",
+    "ingredients": [
+      "yogurt",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 450,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_8",
+    "name": "Oats bowl",
+    "slot": "breakfast",
+    "ingredients": [
+      "oats",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 500,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  },
+  {
+    "id": "meal_9",
+    "name": "Tuna bowl",
+    "slot": "lunch",
+    "ingredients": [
+      "tuna",
+      "olive oil",
+      "salt"
+    ],
+    "kcal": 550,
+    "protein_g": 25,
+    "carbs_g": 30,
+    "fat_g": 12
+  }
+]

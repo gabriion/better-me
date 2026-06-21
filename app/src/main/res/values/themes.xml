@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BetterMe" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.BetterMe.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/teal_deep</item>
+        <item name="postSplashScreenTheme">@style/Theme.BetterMe</item>
+    </style>
+</resources>

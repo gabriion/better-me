@@ -1,0 +1,302 @@
+[
+  {
+    "id": "chest_barbell",
+    "name": "Barbell Chest exercise",
+    "muscleGroup": "chest",
+    "equipment": "barbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/chest_barbell.json"
+  },
+  {
+    "id": "chest_dumbbell",
+    "name": "Dumbbell Chest exercise",
+    "muscleGroup": "chest",
+    "equipment": "dumbbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/chest_dumbbell.json"
+  },
+  {
+    "id": "chest_bodyweight",
+    "name": "Bodyweight Chest exercise",
+    "muscleGroup": "chest",
+    "equipment": "bodyweight",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/chest_bodyweight.json"
+  },
+  {
+    "id": "chest_cable",
+    "name": "Cable Chest exercise",
+    "muscleGroup": "chest",
+    "equipment": "cable",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/chest_cable.json"
+  },
+  {
+    "id": "chest_machine",
+    "name": "Machine Chest exercise",
+    "muscleGroup": "chest",
+    "equipment": "machine",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/chest_machine.json"
+  },
+  {
+    "id": "back_barbell",
+    "name": "Barbell Back exercise",
+    "muscleGroup": "back",
+    "equipment": "barbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/back_barbell.json"
+  },
+  {
+    "id": "back_dumbbell",
+    "name": "Dumbbell Back exercise",
+    "muscleGroup": "back",
+    "equipment": "dumbbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/back_dumbbell.json"
+  },
+  {
+    "id": "back_bodyweight",
+    "name": "Bodyweight Back exercise",
+    "muscleGroup": "back",
+    "equipment": "bodyweight",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/back_bodyweight.json"
+  },
+  {
+    "id": "back_cable",
+    "name": "Cable Back exercise",
+    "muscleGroup": "back",
+    "equipment": "cable",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/back_cable.json"
+  },
+  {
+    "id": "back_machine",
+    "name": "Machine Back exercise",
+    "muscleGroup": "back",
+    "equipment": "machine",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/back_machine.json"
+  },
+  {
+    "id": "shoulders_barbell",
+    "name": "Barbell Shoulders exercise",
+    "muscleGroup": "shoulders",
+    "equipment": "barbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/shoulders_barbell.json"
+  },
+  {
+    "id": "shoulders_dumbbell",
+    "name": "Dumbbell Shoulders exercise",
+    "muscleGroup": "shoulders",
+    "equipment": "dumbbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/shoulders_dumbbell.json"
+  },
+  {
+    "id": "shoulders_bodyweight",
+    "name": "Bodyweight Shoulders exercise",
+    "muscleGroup": "shoulders",
+    "equipment": "bodyweight",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/shoulders_bodyweight.json"
+  },
+  {
+    "id": "shoulders_cable",
+    "name": "Cable Shoulders exercise",
+    "muscleGroup": "shoulders",
+    "equipment": "cable",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/shoulders_cable.json"
+  },
+  {
+    "id": "shoulders_machine",
+    "name": "Machine Shoulders exercise",
+    "muscleGroup": "shoulders",
+    "equipment": "machine",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/shoulders_machine.json"
+  },
+  {
+    "id": "legs_barbell",
+    "name": "Barbell Legs exercise",
+    "muscleGroup": "legs",
+    "equipment": "barbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/legs_barbell.json"
+  },
+  {
+    "id": "legs_dumbbell",
+    "name": "Dumbbell Legs exercise",
+    "muscleGroup": "legs",
+    "equipment": "dumbbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/legs_dumbbell.json"
+  },
+  {
+    "id": "legs_bodyweight",
+    "name": "Bodyweight Legs exercise",
+    "muscleGroup": "legs",
+    "equipment": "bodyweight",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/legs_bodyweight.json"
+  },
+  {
+    "id": "legs_cable",
+    "name": "Cable Legs exercise",
+    "muscleGroup": "legs",
+    "equipment": "cable",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/legs_cable.json"
+  },
+  {
+    "id": "legs_machine",
+    "name": "Machine Legs exercise",
+    "muscleGroup": "legs",
+    "equipment": "machine",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/legs_machine.json"
+  },
+  {
+    "id": "arms_barbell",
+    "name": "Barbell Arms exercise",
+    "muscleGroup": "arms",
+    "equipment": "barbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/arms_barbell.json"
+  },
+  {
+    "id": "arms_dumbbell",
+    "name": "Dumbbell Arms exercise",
+    "muscleGroup": "arms",
+    "equipment": "dumbbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/arms_dumbbell.json"
+  },
+  {
+    "id": "arms_bodyweight",
+    "name": "Bodyweight Arms exercise",
+    "muscleGroup": "arms",
+    "equipment": "bodyweight",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/arms_bodyweight.json"
+  },
+  {
+    "id": "arms_cable",
+    "name": "Cable Arms exercise",
+    "muscleGroup": "arms",
+    "equipment": "cable",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/arms_cable.json"
+  },
+  {
+    "id": "arms_machine",
+    "name": "Machine Arms exercise",
+    "muscleGroup": "arms",
+    "equipment": "machine",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/arms_machine.json"
+  },
+  {
+    "id": "core_barbell",
+    "name": "Barbell Core exercise",
+    "muscleGroup": "core",
+    "equipment": "barbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/core_barbell.json"
+  },
+  {
+    "id": "core_dumbbell",
+    "name": "Dumbbell Core exercise",
+    "muscleGroup": "core",
+    "equipment": "dumbbell",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/core_dumbbell.json"
+  },
+  {
+    "id": "core_bodyweight",
+    "name": "Bodyweight Core exercise",
+    "muscleGroup": "core",
+    "equipment": "bodyweight",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/core_bodyweight.json"
+  },
+  {
+    "id": "core_cable",
+    "name": "Cable Core exercise",
+    "muscleGroup": "core",
+    "equipment": "cable",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/core_cable.json"
+  },
+  {
+    "id": "core_machine",
+    "name": "Machine Core exercise",
+    "muscleGroup": "core",
+    "equipment": "machine",
+    "repsLow": 6,
+    "repsHigh": 12,
+    "setsDefault": 3,
+    "lottie": "ex/core_machine.json"
+  }
+]

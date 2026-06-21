@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ppl_3",
+    "name": "Push/Pull/Legs (3 days)",
+    "days": [
+      "push",
+      "pull",
+      "legs"
+    ]
+  },
+  {
+    "id": "ul_4",
+    "name": "Upper/Lower (4 days)",
+    "days": [
+      "upper",
+      "lower",
+      "upper",
+      "lower"
+    ]
+  },
+  {
+    "id": "fb_3",
+    "name": "Full Body (3 days)",
+    "days": [
+      "full",
+      "full",
+      "full"
+    ]
+  }
+]

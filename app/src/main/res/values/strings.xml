@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Better Me</string>
+    <string name="home_greeting">Hello, %1$s</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_tips">Daily Tips</string>
+    <string name="nav_meals">Meals</string>
+    <string name="nav_calories">Calories</string>
+    <string name="nav_gym">Gym</string>
+    <string name="nav_evolution">Evolution</string>
+</resources>

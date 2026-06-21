@@ -11,7 +11,8 @@ import javax.inject.Inject
 
 data class HomeUiState(
     val firstName: String = "friend",
-    val quote: String = ""
+    val quote: String = "",
+    val heroAsset: String = "concept_art/zen.webp"
 )
 
 @HiltViewModel
@@ -26,7 +27,8 @@ class HomeViewModel @Inject constructor(
     init {
         _state.value = HomeUiState(
             firstName = user.firstNameOrDefault(),
-            quote = content.quoteOfTheDay()
+            quote = content.quoteOfTheDay(),
+            heroAsset = content.heroAssetOfTheDay()
         )
     }
 }

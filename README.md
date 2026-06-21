@@ -10,6 +10,7 @@ A standalone Android companion app for wellbeing — Zen, Mindfulness, Inner Chi
 |---|---|
 | **Home** | Personal greeting + daily quote + nature concept art background |
 | **Daily Tips** | Garmin-powered, rule-based tips refreshed once a day + midday notification |
+| **Goals** | Yearly resolutions + sport goals auto-tracked via Garmin + milestone alerts |
 | **Meals** | Ingredient picker → day/week meal plan with quantities |
 | **Calories** | Food log with OpenFoodFacts search, manual entry, daily target ring |
 | **Gym** | Animated exercise library + auto-generated split routines |
@@ -57,6 +58,12 @@ See [docs/garmin-setup.md](docs/garmin-setup.md). Developer credentials are issu
 | Ink (on-surface) | `#0B1F26` |
 
 Concept art themes (5 hero images bundled in `assets/concept_art/`): Zen · Mindfulness · Inner Child · Inner Peace · Empowerment.
+
+| Zen | Mindfulness | Inner Child | Inner Peace | Empowerment |
+|:---:|:---:|:---:|:---:|:---:|
+| ![Zen](docs/concept_art_preview/zen.png) | ![Mindfulness](docs/concept_art_preview/mindfulness.png) | ![Inner Child](docs/concept_art_preview/inner_child.png) | ![Inner Peace](docs/concept_art_preview/inner_peace.png) | ![Empowerment](docs/concept_art_preview/empowerment.png) |
+
+Regenerate via `py scripts/generate_packs/generate_concept_art.py`.
 
 ## Licence
 

@@ -3,6 +3,7 @@ package com.gabriion.betterme.ui.nav
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FitnessCenter
+import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.LocalDining
 import androidx.compose.material.icons.outlined.PieChart
@@ -24,6 +25,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.gabriion.betterme.ui.calories.CaloriesScreen
 import com.gabriion.betterme.ui.evolution.EvolutionScreen
+import com.gabriion.betterme.ui.goals.GoalsScreen
 import com.gabriion.betterme.ui.gym.GymScreen
 import com.gabriion.betterme.ui.home.HomeScreen
 import com.gabriion.betterme.ui.meals.MealsScreen
@@ -32,6 +34,7 @@ import com.gabriion.betterme.ui.tips.DailyTipsScreen
 sealed class Dest(val route: String, val label: String, val icon: ImageVector) {
     data object Home : Dest("home", "Home", Icons.Outlined.Home)
     data object Tips : Dest("tips", "Tips", Icons.Outlined.Spa)
+    data object Goals : Dest("goals", "Goals", Icons.Outlined.Flag)
     data object Meals : Dest("meals", "Meals", Icons.Outlined.LocalDining)
     data object Calories : Dest("calories", "Calories", Icons.Outlined.PieChart)
     data object Gym : Dest("gym", "Gym", Icons.Outlined.FitnessCenter)
@@ -39,7 +42,7 @@ sealed class Dest(val route: String, val label: String, val icon: ImageVector) {
 }
 
 private val destinations = listOf(
-    Dest.Home, Dest.Tips, Dest.Meals, Dest.Calories, Dest.Gym, Dest.Evolution
+    Dest.Home, Dest.Tips, Dest.Goals, Dest.Meals, Dest.Calories, Dest.Gym, Dest.Evolution
 )
 
 @Composable
@@ -76,6 +79,7 @@ fun BetterMeNavHost() {
         ) {
             composable(Dest.Home.route) { HomeScreen() }
             composable(Dest.Tips.route) { DailyTipsScreen() }
+            composable(Dest.Goals.route) { GoalsScreen() }
             composable(Dest.Meals.route) { MealsScreen() }
             composable(Dest.Calories.route) { CaloriesScreen() }
             composable(Dest.Gym.route) { GymScreen() }

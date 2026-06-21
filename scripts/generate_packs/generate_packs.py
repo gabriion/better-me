@@ -46,18 +46,132 @@ def stub_quotes(n: int = 365) -> list[dict]:
 
 
 def stub_exercises() -> list[dict]:
-    groups = ["chest", "back", "shoulders", "legs", "arms", "core"]
-    equipment = ["barbell", "dumbbell", "bodyweight", "cable", "machine"]
-    out = []
-    for g in groups:
-        for e in equipment:
+    """Deterministic ~80-entry exercise catalogue.
+
+    6 muscle groups × ~13 (equipment, variation) pairs each.
+    Rep/set ranges by equipment family, with a core override.
+    """
+    # (equipment, variation_name)
+    group_variations: dict[str, list[tuple[str, str]]] = {
+        "chest": [
+            ("barbell",    "Bench Press"),
+            ("barbell",    "Incline Bench Press"),
+            ("barbell",    "Decline Bench Press"),
+            ("dumbbell",   "Bench Press"),
+            ("dumbbell",   "Incline Press"),
+            ("dumbbell",   "Fly"),
+            ("dumbbell",   "Pullover"),
+            ("cable",      "Crossover"),
+            ("cable",      "Low-to-High Fly"),
+            ("machine",    "Chest Press"),
+            ("machine",    "Pec Deck"),
+            ("bodyweight", "Push-Up"),
+            ("bodyweight", "Decline Push-Up"),
+        ],
+        "back": [
+            ("barbell",    "Deadlift"),
+            ("barbell",    "Bent-Over Row"),
+            ("barbell",    "Pendlay Row"),
+            ("dumbbell",   "One-Arm Row"),
+            ("dumbbell",   "Chest-Supported Row"),
+            ("cable",      "Seated Row"),
+            ("cable",      "Lat Pulldown"),
+            ("cable",      "Straight-Arm Pulldown"),
+            ("cable",      "Face Pull"),
+            ("machine",    "Assisted Pull-Up"),
+            ("machine",    "T-Bar Row"),
+            ("bodyweight", "Pull-Up"),
+            ("bodyweight", "Inverted Row"),
+        ],
+        "shoulders": [
+            ("barbell",    "Overhead Press"),
+            ("barbell",    "Push Press"),
+            ("dumbbell",   "Shoulder Press"),
+            ("dumbbell",   "Arnold Press"),
+            ("dumbbell",   "Lateral Raise"),
+            ("dumbbell",   "Front Raise"),
+            ("dumbbell",   "Rear Delt Fly"),
+            ("cable",      "Lateral Raise"),
+            ("cable",      "Rear Delt Fly"),
+            ("cable",      "Upright Row"),
+            ("machine",    "Shoulder Press"),
+            ("machine",    "Rear Delt Pec Deck"),
+            ("bodyweight", "Pike Push-Up"),
+        ],
+        "legs": [
+            ("barbell",    "Back Squat"),
+            ("barbell",    "Front Squat"),
+            ("barbell",    "Romanian Deadlift"),
+            ("barbell",    "Hip Thrust"),
+            ("dumbbell",   "Goblet Squat"),
+            ("dumbbell",   "Walking Lunge"),
+            ("dumbbell",   "Bulgarian Split Squat"),
+            ("cable",      "Pull-Through"),
+            ("cable",      "Glute Kickback"),
+            ("machine",    "Leg Press"),
+            ("machine",    "Leg Extension"),
+            ("machine",    "Hamstring Curl"),
+            ("bodyweight", "Air Squat"),
+        ],
+        "arms": [
+            ("barbell",    "Curl"),
+            ("barbell",    "Close-Grip Bench Press"),
+            ("dumbbell",   "Curl"),
+            ("dumbbell",   "Hammer Curl"),
+            ("dumbbell",   "Incline Curl"),
+            ("dumbbell",   "Overhead Triceps Extension"),
+            ("dumbbell",   "Kickback"),
+            ("cable",      "Triceps Pushdown"),
+            ("cable",      "Rope Hammer Curl"),
+            ("cable",      "Overhead Triceps Extension"),
+            ("machine",    "Preacher Curl"),
+            ("machine",    "Triceps Dip"),
+            ("bodyweight", "Diamond Push-Up"),
+        ],
+        "core": [
+            ("bodyweight", "Plank"),
+            ("bodyweight", "Side Plank"),
+            ("bodyweight", "Hollow Hold"),
+            ("bodyweight", "Crunch"),
+            ("bodyweight", "Bicycle Crunch"),
+            ("bodyweight", "Leg Raise"),
+            ("bodyweight", "Hanging Knee Raise"),
+            ("bodyweight", "Mountain Climber"),
+            ("bodyweight", "Russian Twist"),
+            ("dumbbell",   "Russian Twist"),
+            ("cable",      "Woodchopper"),
+            ("cable",      "Crunch"),
+            ("machine",    "Ab Crunch"),
+        ],
+    }
+
+    out: list[dict] = []
+    for g, variations in group_variations.items():
+        for e, vname in variations:
+            # Base ranges by equipment family
+            if g == "core":
+                reps_low, reps_high, sets = 10, 25, 3
+            elif e == "bodyweight":
+                reps_low, reps_high, sets = 8, 20, 3
+            elif e == "barbell":
+                reps_low, reps_high, sets = 6, 12, 4
+            elif e == "dumbbell":
+                reps_low, reps_high, sets = 6, 12, 3
+            else:  # cable, machine
+                reps_low, reps_high, sets = 8, 15, 3
+
+            slug_var = vname.lower().replace(" ", "_").replace("-", "_").replace("/", "_")
+            ex_id = f"{g}_{e}_{slug_var}"
+            display_name = f"{e.title()} {vname}"
             out.append({
-                "id": f"{g}_{e}",
-                "name": f"{e.title()} {g.title()} exercise",
+                "id": ex_id,
+                "name": display_name,
                 "muscleGroup": g,
                 "equipment": e,
-                "repsLow": 6, "repsHigh": 12, "setsDefault": 3,
-                "lottie": f"ex/{g}_{e}.json",
+                "repsLow": reps_low,
+                "repsHigh": reps_high,
+                "setsDefault": sets,
+                "lottie": f"ex/{ex_id}.json",
             })
     return out
 
@@ -127,9 +241,11 @@ def stub_meals() -> list[dict]:
 
 def stub_workouts() -> list[dict]:
     return [
-        {"id": "ppl_3", "name": "Push/Pull/Legs (3 days)", "days": ["push", "pull", "legs"]},
-        {"id": "ul_4",  "name": "Upper/Lower (4 days)",   "days": ["upper", "lower", "upper", "lower"]},
-        {"id": "fb_3",  "name": "Full Body (3 days)",     "days": ["full", "full", "full"]},
+        {"id": "ul_2",  "name": "Upper/Lower (2 days)",     "days": ["upper", "lower"]},
+        {"id": "ppl_3", "name": "Push/Pull/Legs (3 days)",  "days": ["push", "pull", "legs"]},
+        {"id": "fb_3",  "name": "Full Body (3 days)",       "days": ["full", "full", "full"]},
+        {"id": "ul_4",  "name": "Upper/Lower (4 days)",     "days": ["upper", "lower", "upper", "lower"]},
+        {"id": "bro_5", "name": "Bro Split (5 days)",       "days": ["push", "pull", "legs", "upper", "lower"]},
     ]
 
 

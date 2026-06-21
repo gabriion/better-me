@@ -25,4 +25,16 @@ object DatabaseModule {
     @Provides
     @Singleton
     fun provideGoalDao(db: AppDatabase): GoalDao = db.goalDao()
+
+    @Provides
+    @Singleton
+    fun provideWeightDao(db: AppDatabase): com.gabriion.betterme.core.db.WeightDao = db.weightDao()
+
+    @Provides
+    @Singleton
+    fun provideFoodDao(db: AppDatabase): com.gabriion.betterme.core.db.FoodDao = db.foodDao()
+
+    @Provides
+    @Singleton
+    fun provideWorkoutDao(db: AppDatabase): com.gabriion.betterme.core.db.WorkoutDao = db.workoutDao()
 }

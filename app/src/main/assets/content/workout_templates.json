@@ -1,11 +1,28 @@
 [
   {
+    "id": "ul_2",
+    "name": "Upper/Lower (2 days)",
+    "days": [
+      "upper",
+      "lower"
+    ]
+  },
+  {
     "id": "ppl_3",
     "name": "Push/Pull/Legs (3 days)",
     "days": [
       "push",
       "pull",
       "legs"
+    ]
+  },
+  {
+    "id": "fb_3",
+    "name": "Full Body (3 days)",
+    "days": [
+      "full",
+      "full",
+      "full"
     ]
   },
   {
@@ -19,12 +36,14 @@
     ]
   },
   {
-    "id": "fb_3",
-    "name": "Full Body (3 days)",
+    "id": "bro_5",
+    "name": "Bro Split (5 days)",
     "days": [
-      "full",
-      "full",
-      "full"
+      "push",
+      "pull",
+      "legs",
+      "upper",
+      "lower"
     ]
   }
 ]

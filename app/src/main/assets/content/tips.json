@@ -1,0 +1,76 @@
+[
+  {
+    "kind": "sleep",
+    "priority": 10,
+    "messages": [
+      "You slept {hours}h. A 20-min power nap after lunch could help.",
+      "Short night ({hours}h) — be gentle on intensity today.",
+      "{hours}h of sleep last night. Hydrate early and dim screens after 9pm.",
+      "Only {hours}h in bed — protect the next wind-down."
+    ]
+  },
+  {
+    "kind": "rhr",
+    "priority": 9,
+    "messages": [
+      "RHR is up vs your 7-day average. Try 10 minutes of slow breathing.",
+      "Heart's running a touch warm today — easy aerobic work only.",
+      "Your resting heart rate is elevated. Walk, don't sprint."
+    ]
+  },
+  {
+    "kind": "activity_hr",
+    "priority": 8,
+    "messages": [
+      "HR was high during your {activity}. Recovery day before your next training.",
+      "{activity} pushed your heart hard. Mobility + stretch tonight.",
+      "Tough {activity}. Add a recovery day before training again."
+    ]
+  },
+  {
+    "kind": "stress",
+    "priority": 7,
+    "messages": [
+      "Stress trending high. Try a 5-min guided breath.",
+      "Body signals say slow down — two minutes of box breathing.",
+      "High stress load today. Step outside for a slow walk."
+    ]
+  },
+  {
+    "kind": "hrv",
+    "priority": 7,
+    "messages": [
+      "HRV is suppressed. Prioritise sleep tonight.",
+      "Low HRV — skip late caffeine and aim for lights-out by 22:30.",
+      "Recovery system asking for rest. Easy day, early bed."
+    ]
+  },
+  {
+    "kind": "steps",
+    "priority": 6,
+    "messages": [
+      "Only {steps} steps so far. A 15-min walk would close the gap.",
+      "{steps} steps in the bank — a lap around the block helps.",
+      "Light on movement ({steps} steps). Take the long way back from lunch."
+    ]
+  },
+  {
+    "kind": "hydration",
+    "priority": 5,
+    "messages": [
+      "Drink a glass of water. Small kindness, big effect.",
+      "Refill the bottle. Hydration is the cheapest performance tool.",
+      "Pause and sip — your brain runs on water too."
+    ]
+  },
+  {
+    "kind": "mindfulness",
+    "priority": 4,
+    "messages": [
+      "Two minutes of stillness sets a kinder tone for the day.",
+      "Three slow breaths. In through the nose, out twice as long.",
+      "Notice one thing you're grateful for right now.",
+      "Soften your jaw, drop your shoulders, unclench your hands."
+    ]
+  }
+]

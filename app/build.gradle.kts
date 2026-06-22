@@ -105,6 +105,9 @@ dependencies {
     implementation(libs.vico.compose)
     implementation(libs.vico.compose.m3)
 
+    // Health Connect (vendor-agnostic biometrics)
+    implementation(libs.health.connect.client)
+
     // Testing
     testImplementation(libs.junit)
     testImplementation(libs.mockk)

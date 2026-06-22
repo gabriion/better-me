@@ -2,15 +2,15 @@
 
 A standalone Android companion app for wellbeing — Zen, Mindfulness, Inner Child, Inner Peace, Empowerment.
 
-> V1 — offline-first, bundled AI-generated content packs, Garmin Connect integration for biometric-driven daily tips.
+> V1 — offline-first, bundled AI-generated content packs, vendor-agnostic biometrics via Health Connect plus app-internal signals from your own logged workouts and weights.
 
 ## Modules
 
 | Screen | Purpose |
 |---|---|
 | **Home** | Personal greeting + daily quote + nature concept art background |
-| **Daily Tips** | Garmin-powered, rule-based tips refreshed once a day + midday notification |
-| **Goals** | Yearly resolutions + sport goals auto-tracked via Garmin + milestone alerts |
+| **Daily Tips** | Vendor-agnostic biometrics (Health Connect) + self-signals from your own logged workouts/weights, rule-based, refreshed daily + midday notification |
+| **Goals** | Yearly resolutions + sport goals tracked from activity sessions + milestone alerts |
 | **Meals** | Ingredient picker → day/week meal plan with quantities |
 | **Calories** | Food log with OpenFoodFacts search, manual entry, daily target ring |
 | **Gym** | Animated exercise library + auto-generated split routines |
@@ -43,9 +43,11 @@ py generate_packs.py all
 
 See [scripts/generate_packs/README.md](scripts/generate_packs/README.md).
 
-## Garmin integration
+## Health data integration
 
-See [docs/garmin-setup.md](docs/garmin-setup.md). Developer credentials are issued by Garmin within ~1 week. Until then the app runs against the `GarminClientStub` and the tip engine falls back to default mindfulness messages.
+See [docs/health-connect.md](docs/health-connect.md). The app reads steps, sleep, heart rate and HRV from **Android Health Connect** — a vendor-agnostic on-device API that aggregates data from Garmin Connect, Samsung Health, Fitbit, Google Fit and others. No business approval needed; the user grants per-record permissions in the system UI.
+
+When Health Connect is unavailable or unauthorised, the app produces meaningful tips from its own logged data (workout gaps, streaks, weight trends, weigh-in nudges) via `AppSignalsSource`. The app is useful on day one with no tracker.
 
 ## Design system
 

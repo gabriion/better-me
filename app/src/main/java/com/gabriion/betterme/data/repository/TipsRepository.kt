@@ -4,7 +4,7 @@ import android.content.Context
 import com.gabriion.betterme.domain.tips.ComposedTip
 import com.gabriion.betterme.domain.tips.TipComposer
 import com.gabriion.betterme.domain.tips.TipTemplate
-import com.gabriion.betterme.garmin.GarminClient
+import com.gabriion.betterme.health.HealthDataSource
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -16,7 +16,7 @@ import javax.inject.Singleton
 @Singleton
 class TipsRepository @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val garminClient: GarminClient
+    private val health: HealthDataSource
 ) {
     private val json = Json { ignoreUnknownKeys = true }
 
@@ -30,11 +30,18 @@ class TipsRepository @Inject constructor(
     private val composer: TipComposer by lazy { TipComposer(templates) }
 
     suspend fun getTodayTips(): List<ComposedTip> {
-        // V1: snapshot is null until Garmin OAuth ships. The call chain is in
-        // place so this becomes a one-line swap.
-        val snapshot = runCatching { garminClient.fetchDailySnapshot() }.getOrNull()
-        return composer.compose(snapshot = snapshot, rhr7dAvg = null, today = LocalDate.now())
+        val snapshot = runCatching { health.fetchSnapshot() }.getOrNull()
+        val signals = runCatching { health.fetchAppSignals() }.getOrNull()
+            ?: com.gabriion.betterme.health.AppSignals.EMPTY
+        return composer.compose(
+            snapshot = snapshot,
+            signals = signals,
+            rhr7dAvg = null,
+            today = LocalDate.now()
+        )
     }
+
+    suspend fun isHealthConnectReady(): Boolean = runCatching { health.isHealthConnectReady() }.getOrDefault(false)
 
     fun observeTodayTips(): Flow<List<ComposedTip>> = flow { emit(getTodayTips()) }
 }

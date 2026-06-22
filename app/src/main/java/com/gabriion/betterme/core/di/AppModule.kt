@@ -1,18 +1,17 @@
 package com.gabriion.betterme.core.di
 
-import com.gabriion.betterme.garmin.GarminClient
-import com.gabriion.betterme.garmin.GarminClientStub
+import com.gabriion.betterme.health.CombinedHealthSource
+import com.gabriion.betterme.health.HealthDataSource
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
-    @Provides
+abstract class AppModule {
+    @Binds
     @Singleton
-    fun provideGarminClient(): GarminClient = GarminClientStub()
+    abstract fun bindHealthDataSource(impl: CombinedHealthSource): HealthDataSource
 }

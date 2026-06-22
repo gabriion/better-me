@@ -21,6 +21,7 @@ datastore = "1.1.1"
 workmanager = "2.9.1"
 lottie = "6.4.0"
 vico = "1.13.1"
+health-connect = "1.1.0-alpha07"
 serialization = "1.7.1"
 kotlin-serialization-plugin = "2.0.10"
 junit = "4.13.2"
@@ -92,6 +93,9 @@ lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", versio
 # Vico charts
 vico-compose = { group = "com.patrykandpatrick.vico", name = "compose", version.ref = "vico" }
 vico-compose-m3 = { group = "com.patrykandpatrick.vico", name = "compose-m3", version.ref = "vico" }
+
+# Health Connect (vendor-agnostic biometrics: steps, sleep, HR, HRV, etc.)
+health-connect-client = { group = "androidx.health.connect", name = "connect-client", version.ref = "health-connect" }
 
 # Testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }

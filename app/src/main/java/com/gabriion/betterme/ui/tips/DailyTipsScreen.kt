@@ -96,7 +96,7 @@ private fun HeaderCard(today: LocalDate = LocalDate.now()) {
             )
             Spacer(Modifier.height(12.dp))
             Text(
-                text = "Connect Garmin for personalised tips.",
+                text = "Personalised when you connect Health Connect — plus tips from your own logged workouts and weights.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

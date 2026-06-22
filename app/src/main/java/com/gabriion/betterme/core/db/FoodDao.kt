@@ -24,13 +24,13 @@ interface FoodDao {
     suspend fun deleteEntry(id: Long)
 
     // cache -------------------------------------------------------------
-    @Query("SELECT * FROM food_cache WHERE name LIKE '%' || :q || '%' OR brand LIKE '%' || :q || '%' ORDER BY favourite DESC, last_used DESC NULLS LAST, name ASC LIMIT 30")
+    @Query("SELECT * FROM food_cache WHERE name LIKE '%' || :q || '%' OR brand LIKE '%' || :q || '%' ORDER BY favourite DESC, (last_used IS NULL) ASC, last_used DESC, name ASC LIMIT 30")
     suspend fun searchCache(q: String): List<FoodCacheEntity>
 
     @Query("SELECT * FROM food_cache WHERE favourite = 1 ORDER BY name ASC LIMIT 50")
     fun observeFavourites(): Flow<List<FoodCacheEntity>>
 
-    @Query("SELECT * FROM food_cache ORDER BY last_used DESC NULLS LAST LIMIT 20")
+    @Query("SELECT * FROM food_cache ORDER BY (last_used IS NULL) ASC, last_used DESC LIMIT 20")
     fun observeRecent(): Flow<List<FoodCacheEntity>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

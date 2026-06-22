@@ -269,7 +269,7 @@ private fun AddGoalSheet(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Switch(checked = sport, onCheckedChange = { sport = it })
                 Spacer(Modifier.width(8.dp))
-                Text("Auto-receive Garmin events", style = MaterialTheme.typography.bodyMedium)
+                Text("Auto-receive activity events (when Health Connect is wired)", style = MaterialTheme.typography.bodyMedium)
             }
             Spacer(Modifier.height(16.dp))
 

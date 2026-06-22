@@ -25,7 +25,7 @@ object HighlightsEngine {
         val out = mutableListOf<Highlight>()
         weightDeltaThisMonth(weights, today)?.let(out::add)
         workoutStreak(workoutSets, today)?.let(out::add)
-        // Sleep / mindfulness placeholders are intentionally null until Garmin sync ships.
+        // Sleep / mindfulness placeholders are intentionally null until Health Connect is wired.
         if (out.isEmpty()) {
             out.add(
                 Highlight(

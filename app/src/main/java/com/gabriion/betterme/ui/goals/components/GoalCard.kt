@@ -65,7 +65,7 @@ fun GoalCard(
                     if (item.goal.isSportTracked) {
                         AssistChip(
                             onClick = {},
-                            label = { Text("Garmin", style = MaterialTheme.typography.labelSmall) },
+                            label = { Text("Activity", style = MaterialTheme.typography.labelSmall) },
                             colors = AssistChipDefaults.assistChipColors(
                                 containerColor = MaterialTheme.colorScheme.tertiaryContainer,
                                 labelColor = MaterialTheme.colorScheme.onTertiaryContainer

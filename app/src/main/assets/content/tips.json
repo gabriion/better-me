@@ -28,6 +28,15 @@
     ]
   },
   {
+    "kind": "workout_gap",
+    "priority": 8,
+    "messages": [
+      "It's been {daysSinceWorkout} days since your last workout. A short session beats none.",
+      "Body's been quiet for {daysSinceWorkout} days — even 20 minutes counts.",
+      "No workout logged in {daysSinceWorkout} days. What about a walk + 3 sets of something?"
+    ]
+  },
+  {
     "kind": "stress",
     "priority": 7,
     "messages": [
@@ -64,6 +73,15 @@
     ]
   },
   {
+    "kind": "streak_celebration",
+    "priority": 5,
+    "messages": [
+      "{streak} days of training in a row. Quiet consistency wins.",
+      "Streak: {streak} days. Keep showing up — and remember rest days are training too.",
+      "{streak}-day streak! Watch for the small signs of fatigue."
+    ]
+  },
+  {
     "kind": "mindfulness",
     "priority": 4,
     "messages": [
@@ -71,6 +89,33 @@
       "Three slow breaths. In through the nose, out twice as long.",
       "Notice one thing you're grateful for right now.",
       "Soften your jaw, drop your shoulders, unclench your hands."
+    ]
+  },
+  {
+    "kind": "weight_trend_down",
+    "priority": 4,
+    "messages": [
+      "Weight trending down ~{trendKg}kg/week. Protein and sleep keep the muscle.",
+      "Steady drop of ~{trendKg}kg/week. Slow is sustainable.",
+      "Trending down ~{trendKg}kg/week — well paced."
+    ]
+  },
+  {
+    "kind": "weight_trend_up",
+    "priority": 4,
+    "messages": [
+      "Weight trending up ~{trendKg}kg/week. Worth a glance at portions and evening snacks.",
+      "Up ~{trendKg}kg/week — natural fluctuation, or a pattern? A few more data points will tell.",
+      "Trending up ~{trendKg}kg/week. Bulk phase, or quiet drift?"
+    ]
+  },
+  {
+    "kind": "weigh_in_nudge",
+    "priority": 3,
+    "messages": [
+      "It's been {daysSinceWeighIn} days since your last weigh-in. Step on the scale this morning?",
+      "No weight logged in {daysSinceWeighIn} days — same time, same conditions makes the trend honest.",
+      "Quick weigh-in? Last one was {daysSinceWeighIn} days ago."
     ]
   }
 ]

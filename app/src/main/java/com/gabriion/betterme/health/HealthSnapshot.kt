@@ -11,6 +11,7 @@ data class HealthSnapshot(
     val sleepHours: Double? = null,
     val restingHeartRate: Int? = null,
     val hrv: Int? = null,
+    val stressAvg: Int? = null,
     val steps: Int? = null,
     val activeMinutes: Int? = null,
     val lastActivityHrAvg: Int? = null,
@@ -18,7 +19,8 @@ data class HealthSnapshot(
 ) {
     val isEmpty: Boolean
         get() = sleepHours == null && restingHeartRate == null && hrv == null &&
-                steps == null && activeMinutes == null && lastActivityHrAvg == null
+                stressAvg == null && steps == null && activeMinutes == null &&
+                lastActivityHrAvg == null
 
     companion object {
         val EMPTY = HealthSnapshot()

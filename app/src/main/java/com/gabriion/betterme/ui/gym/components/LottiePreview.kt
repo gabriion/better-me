@@ -29,7 +29,8 @@ fun LottiePreview(
     modifier: Modifier = Modifier,
     size: Dp = 48.dp,
 ) {
-    val composition by rememberLottieComposition(LottieCompositionSpec.Asset(assetPath))
+    val compositionResult = rememberLottieComposition(LottieCompositionSpec.Asset(assetPath))
+    val composition = compositionResult.value
     Surface(
         modifier = modifier.size(size),
         shape = CircleShape,

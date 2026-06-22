@@ -85,6 +85,7 @@ class HealthConnectSource @Inject constructor(
                 sleepHours = sleepHours,
                 restingHeartRate = rhr,
                 hrv = hrv,
+                stressAvg = null,
                 steps = steps,
                 activeMinutes = null,
                 lastActivityHrAvg = null,

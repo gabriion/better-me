@@ -1,7 +1,9 @@
 package com.gabriion.betterme.ui.settings
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -37,10 +39,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 
 /**
  * Settings screen — the Health Connect permission entry-point in V1.
- *
- * When the platform has Health Connect available, we launch the standard
- * request-permissions contract that shows the system UI. When Health Connect
- * is not installed, we deep-link to the Play Store listing.
  */
 @Composable
 fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
@@ -49,7 +47,12 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
 
     val requestPermissions = rememberLauncherForActivityResult(
         contract = PermissionController.createRequestPermissionResultContract()
-    ) { _ -> viewModel.refresh() }
+    ) { granted ->
+        viewModel.refresh()
+        val msg = if (granted.isNotEmpty()) "${granted.size} permission(s) granted"
+                  else "No permissions granted — you can try again anytime."
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+    }
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -71,19 +74,59 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
                 total = state.totalPermissionsCount,
                 onConnect = {
                     if (state.healthConnectAvailable) {
-                        requestPermissions.launch(viewModel.requiredPermissions)
-                    } else {
-                        val intent = Intent(Intent.ACTION_VIEW).apply {
-                            data = Uri.parse("market://details?id=${viewModel.providerPackage}")
-                            setPackage("com.android.vending")
+                        runCatching {
+                            requestPermissions.launch(viewModel.requiredPermissions)
+                        }.onFailure {
+                            Toast.makeText(
+                                context,
+                                "Couldn't open Health Connect: ${it.message}",
+                                Toast.LENGTH_LONG
+                            ).show()
                         }
-                        runCatching { context.startActivity(intent) }
+                    } else {
+                        // Try Play Store app first, fall back to web URL.
+                        val pkg = viewModel.providerPackage
+                        val marketUri = Uri.parse("market://details?id=$pkg")
+                        val marketIntent = Intent(Intent.ACTION_VIEW, marketUri).apply {
+                            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        }
+                        val webIntent = Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://play.google.com/store/apps/details?id=$pkg")
+                        ).apply { addFlags(Intent.FLAG_ACTIVITY_NEW_TASK) }
+                        try {
+                            context.startActivity(marketIntent)
+                        } catch (_: ActivityNotFoundException) {
+                            try {
+                                context.startActivity(webIntent)
+                            } catch (_: ActivityNotFoundException) {
+                                Toast.makeText(
+                                    context,
+                                    "Open Play Store and search for 'Health Connect'.",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+                        }
                     }
                 },
                 onManage = {
-                    // Launch the system Health Connect app so the user can revoke/adjust.
-                    val intent = Intent("androidx.health.ACTION_HEALTH_CONNECT_SETTINGS")
-                    runCatching { context.startActivity(intent) }
+                    // Open the system Health Connect app so the user can revoke/adjust.
+                    val settingsIntent = Intent("androidx.health.ACTION_HEALTH_CONNECT_SETTINGS")
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    val launchApp = context.packageManager
+                        .getLaunchIntentForPackage(viewModel.providerPackage)
+                        ?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    try {
+                        context.startActivity(settingsIntent)
+                    } catch (_: ActivityNotFoundException) {
+                        if (launchApp != null) {
+                            try { context.startActivity(launchApp) } catch (_: Exception) {
+                                Toast.makeText(context, "Couldn't open Health Connect.", Toast.LENGTH_SHORT).show()
+                            }
+                        } else {
+                            Toast.makeText(context, "Health Connect app not found.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 }
             )
         }
@@ -122,7 +165,7 @@ private fun HealthConnectCard(
             Spacer(Modifier.height(8.dp))
             Text(
                 text = when {
-                    !available -> "Health Connect is not installed on this device. Install it from the Play Store to let Better Me read biometrics from your wearable app (Garmin, Samsung Health, Fitbit, Google Fit, and others)."
+                    !available -> "Health Connect is not installed on this device. Tap below to install it from the Play Store — Better Me reads biometrics from your wearable app (Garmin, Samsung Health, Fitbit, Google Fit, and others) via Health Connect."
                     ready -> "Connected. $granted of $total permissions granted."
                     granted > 0 -> "Partially connected. $granted of $total permissions granted — tap below to grant the rest."
                     else -> "Not connected. Grant read access so tips can be personalised to your sleep, steps, heart rate and HRV."
@@ -164,7 +207,7 @@ private fun AboutCard() {
             }
             Spacer(Modifier.height(8.dp))
             Text(
-                "Better Me v1.0 — a quiet companion for mindfulness, movement, meals, and the goals that matter to you. All data stays on your device.",
+                "Better Me v1.1 — a quiet companion for mindfulness, movement, meals, and the goals that matter to you. All data stays on your device.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

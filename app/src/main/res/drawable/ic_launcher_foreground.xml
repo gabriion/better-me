@@ -1,16 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Better Me — adaptive-icon foreground: praying hands, minimalist.
+    Two mirrored hand silhouettes with distinct fingertips at the top,
+    a palm bulge in the middle, and narrower wrists at the bottom.
+    The hands meet along a strong central seam.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+
+    <!-- LEFT hand: fingertip at (48,12), palm bulge at (30,55), wrist at (46,92). -->
     <path
-        android:fillColor="#0F4C5C"
-        android:pathData="M0,0h108v108h-108z"/>
+        android:fillColor="#F4F1DE"
+        android:pathData="
+            M 48,12
+            C 40,22  32,38  30,55
+            C 29,72  36,86  46,92
+            L 53,92
+            L 53,14
+            C 52,12  50,10  48,12
+            Z" />
+
+    <!-- RIGHT hand: mirror of the left. -->
     <path
-        android:fillColor="#A8D8E8"
-        android:pathData="M54,30 A24,24 0 1 0 54,78 A24,24 0 1 0 54,30 Z"/>
+        android:fillColor="#F4F1DE"
+        android:pathData="
+            M 60,12
+            C 68,22  76,38  78,55
+            C 79,72  72,86  62,92
+            L 55,92
+            L 55,14
+            C 56,12  58,10  60,12
+            Z" />
+
+    <!-- Central seam: strong teal line separating the two hands. -->
     <path
-        android:fillColor="#7DBE9A"
-        android:pathData="M54,42 C46,54 46,60 54,72 C62,60 62,54 54,42 Z"/>
+        android:strokeColor="#0F4C5C"
+        android:strokeWidth="1.5"
+        android:pathData="M 54,14 L 54,92" />
+
+    <!-- Sage wrist band across the base. -->
+    <path
+        android:strokeColor="#7DBE9A"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M 40,88 L 68,88" />
 </vector>

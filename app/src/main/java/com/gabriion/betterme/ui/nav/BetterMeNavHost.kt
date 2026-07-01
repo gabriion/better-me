@@ -10,6 +10,7 @@ import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.LocalDining
 import androidx.compose.material.icons.outlined.PieChart
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Spa
 import androidx.compose.material.icons.outlined.TrendingUp
 import androidx.compose.material3.Icon
@@ -35,6 +36,7 @@ import com.gabriion.betterme.ui.gym.GymScreen
 import com.gabriion.betterme.ui.home.HomeScreen
 import com.gabriion.betterme.ui.meals.MealsScreen
 import com.gabriion.betterme.ui.onboarding.OnboardingScreen
+import com.gabriion.betterme.ui.settings.SettingsScreen
 import com.gabriion.betterme.ui.tips.DailyTipsScreen
 
 sealed class Dest(val route: String, val label: String, val icon: ImageVector) {
@@ -46,10 +48,11 @@ sealed class Dest(val route: String, val label: String, val icon: ImageVector) {
     data object Calories : Dest("calories", "Calories", Icons.Outlined.PieChart)
     data object Gym : Dest("gym", "Gym", Icons.Outlined.FitnessCenter)
     data object Evolution : Dest("evolution", "Evolution", Icons.Outlined.TrendingUp)
+    data object Settings : Dest("settings", "Settings", Icons.Outlined.Settings)
 }
 
 private val tabs = listOf(
-    Dest.Home, Dest.Tips, Dest.Goals, Dest.Meals, Dest.Calories, Dest.Gym, Dest.Evolution
+    Dest.Home, Dest.Tips, Dest.Goals, Dest.Meals, Dest.Calories, Dest.Gym, Dest.Evolution, Dest.Settings
 )
 
 @Composable
@@ -109,6 +112,7 @@ fun BetterMeNavHost(
             composable(Dest.Calories.route) { CaloriesScreen() }
             composable(Dest.Gym.route) { GymScreen() }
             composable(Dest.Evolution.route) { EvolutionScreen() }
+            composable(Dest.Settings.route) { SettingsScreen() }
         }
     }
 }

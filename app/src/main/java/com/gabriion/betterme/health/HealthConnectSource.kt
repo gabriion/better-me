@@ -46,11 +46,26 @@ class HealthConnectSource @Inject constructor(
         HealthPermission.getReadPermission(HeartRateVariabilityRmssdRecord::class)
     )
 
+    /** True if the Health Connect provider (system or standalone APK) is installed. */
+    val isSdkAvailable: Boolean
+        get() = HealthConnectClient.getSdkStatus(context) == HealthConnectClient.SDK_AVAILABLE
+
+    /** Package name to send the user to Play Store to install Health Connect. */
+    val providerPackageName: String
+        get() = "com.google.android.apps.healthdata"
+
     suspend fun isReady(): Boolean {
         val c = client ?: return false
         return runCatching {
-            c.permissionController.getGrantedPermissions().any { it in requiredReadPermissions }
+            c.permissionController.getGrantedPermissions().containsAll(requiredReadPermissions)
         }.getOrDefault(false)
+    }
+
+    suspend fun grantedCount(): Int {
+        val c = client ?: return 0
+        return runCatching {
+            c.permissionController.getGrantedPermissions().count { it in requiredReadPermissions }
+        }.getOrDefault(0)
     }
 
     suspend fun fetchSnapshot(): HealthSnapshot {

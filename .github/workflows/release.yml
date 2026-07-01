@@ -1,0 +1,45 @@
+name: Release
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+      - name: Build debug APK (installable, debug-signed)
+        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
+      - name: Run unit tests
+        run: ./gradlew :app:testDebugUnitTest --no-daemon
+      - name: Rename APK with version
+        run: |
+          mkdir -p release
+          cp app/build/outputs/apk/debug/app-debug.apk release/betterme-${GITHUB_REF_NAME}-debug.apk
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Better Me ${{ github.ref_name }}"
+          body: |
+            Better Me ${{ github.ref_name }} — installable debug-signed APK.
+
+            **Install on your Android phone:**
+            1. Download `betterme-${{ github.ref_name }}-debug.apk` below.
+            2. On your phone, enable "Install unknown apps" for your browser/file manager.
+            3. Open the APK and tap install.
+            4. On first run, grant notification permission when prompted.
+            5. To personalise Daily Tips: Settings → Connect health data → grant Health Connect read access.
+
+            **Note:** This is a debug-signed APK for personal testing, not a Play Store release.
+          generate_release_notes: true
+          files: release/*.apk

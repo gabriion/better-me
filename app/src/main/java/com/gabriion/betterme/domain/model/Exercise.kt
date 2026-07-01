@@ -12,4 +12,5 @@ data class Exercise(
     val repsHigh: Int,
     val setsDefault: Int,
     val lottie: String,
+    val pattern: String? = null,
 )

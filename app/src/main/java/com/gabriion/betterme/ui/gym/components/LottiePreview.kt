@@ -21,12 +21,11 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 /**
  * Renders a Lottie animation for an exercise.
  *
- * V1 ships one generic looping animation per muscle group in
- * `assets/ex/<group>.json` rather than 80 hand-authored per-exercise files.
- * When [muscleGroup] is provided we load that bundled animation directly,
- * ignoring [assetPath] (per-exercise files don't exist yet). If loading fails
- * or no muscle group is supplied we fall back to a FitnessCenter icon inside
- * a tinted circle.
+ * Loading priority:
+ *   1. [pattern]      → `ex/patterns/{pattern}.json` (movement-pattern stick figure)
+ *   2. [muscleGroup]  → `ex/{muscleGroup}.json`      (bundled abstract fallback)
+ *   3. [assetPath]                                    (raw path passed in)
+ *   4. FitnessCenter icon in a tinted circle          (composition load failed)
  */
 @Composable
 fun LottiePreview(
@@ -34,8 +33,13 @@ fun LottiePreview(
     modifier: Modifier = Modifier,
     size: Dp = 48.dp,
     muscleGroup: String? = null,
+    pattern: String? = null,
 ) {
-    val effectivePath = muscleGroup?.let { "ex/${it.lowercase()}.json" } ?: assetPath
+    val effectivePath = when {
+        !pattern.isNullOrBlank()     -> "ex/patterns/${pattern.lowercase()}.json"
+        !muscleGroup.isNullOrBlank() -> "ex/${muscleGroup.lowercase()}.json"
+        else                         -> assetPath
+    }
     val compositionResult = rememberLottieComposition(LottieCompositionSpec.Asset(effectivePath))
     val composition = compositionResult.value
     Surface(

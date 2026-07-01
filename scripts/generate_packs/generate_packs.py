@@ -45,6 +45,87 @@ def stub_quotes(n: int = 365) -> list[dict]:
     return out
 
 
+def _pattern_for(g: str, e: str, vname: str) -> str:
+    """Pick the closest movement-pattern animation for an exercise.
+
+    Patterns are the 20 stick-figure Lottie files under
+    ``app/src/main/assets/ex/patterns/``. Selection is name-driven so the
+    catalogue can grow without touching this function.
+    """
+    n = vname.lower()
+
+    # ---- core: pattern is driven mostly by the exercise name ----
+    if g == "core":
+        if "twist" in n or "woodchopper" in n:
+            return "russian_twist"
+        if "plank" in n or "hollow" in n or "mountain" in n:
+            return "plank"
+        # crunch, bicycle crunch, leg raise, hanging knee raise, ab crunch...
+        return "crunch"
+
+    # ---- arms: curls vs extensions ----
+    if g == "arms":
+        if "curl" in n:
+            return "bicep_curl"
+        if "push-up" in n or "push up" in n or "pushup" in n:
+            return "push_up"
+        # kickback, pushdown, overhead triceps ext, close-grip bench, dip
+        return "tricep_extension"
+
+    # ---- chest ----
+    if g == "chest":
+        if e == "bodyweight":
+            return "push_up"
+        if e == "barbell":
+            return "bench_press"
+        if e == "dumbbell":
+            if "fly" in n or "pullover" in n:
+                return "chest_fly"
+            return "bench_press"
+        if e == "cable":
+            return "chest_fly"
+        if e == "machine":
+            # "chest press" -> bench, "pec deck" -> fly
+            return "bench_press" if "press" in n else "chest_fly"
+        return "bench_press"
+
+    # ---- back ----
+    if g == "back":
+        if "deadlift" in n:
+            return "deadlift"
+        if "pull-up" in n or "pull up" in n or "pullup" in n:
+            return "pull_up"
+        if "lat pulldown" in n or "pulldown" in n:
+            return "lat_pulldown"
+        if "row" in n or "face pull" in n:
+            return "row"
+        return "row"
+
+    # ---- shoulders ----
+    if g == "shoulders":
+        if "lateral raise" in n or "rear delt" in n:
+            return "shoulder_lateral_raise"
+        if "front raise" in n:
+            return "shoulder_front_raise"
+        if "upright row" in n:
+            return "row"
+        # presses, push press, arnold press, pike push-up
+        return "overhead_press"
+
+    # ---- legs ----
+    if g == "legs":
+        if "lunge" in n or "split squat" in n:
+            return "lunge"
+        if "deadlift" in n or "pull-through" in n or "pull through" in n:
+            return "deadlift"
+        if "curl" in n or "kickback" in n or "extension" in n:
+            return "leg_curl"
+        # back/front squat, goblet squat, hip thrust, leg press, air squat
+        return "squat"
+
+    return "squat"  # sensible default; never reached with current catalogue
+
+
 def stub_exercises() -> list[dict]:
     """Deterministic ~80-entry exercise catalogue.
 
@@ -172,6 +253,7 @@ def stub_exercises() -> list[dict]:
                 "repsHigh": reps_high,
                 "setsDefault": sets,
                 "lottie": f"ex/{ex_id}.json",
+                "pattern": _pattern_for(g, e, vname),
             })
     return out
 

@@ -7,7 +7,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/chest_barbell_bench_press.json"
+    "lottie": "ex/chest_barbell_bench_press.json",
+    "pattern": "bench_press"
   },
   {
     "id": "chest_barbell_incline_bench_press",
@@ -17,7 +18,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/chest_barbell_incline_bench_press.json"
+    "lottie": "ex/chest_barbell_incline_bench_press.json",
+    "pattern": "bench_press"
   },
   {
     "id": "chest_barbell_decline_bench_press",
@@ -27,7 +29,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/chest_barbell_decline_bench_press.json"
+    "lottie": "ex/chest_barbell_decline_bench_press.json",
+    "pattern": "bench_press"
   },
   {
     "id": "chest_dumbbell_bench_press",
@@ -37,7 +40,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/chest_dumbbell_bench_press.json"
+    "lottie": "ex/chest_dumbbell_bench_press.json",
+    "pattern": "bench_press"
   },
   {
     "id": "chest_dumbbell_incline_press",
@@ -47,7 +51,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/chest_dumbbell_incline_press.json"
+    "lottie": "ex/chest_dumbbell_incline_press.json",
+    "pattern": "bench_press"
   },
   {
     "id": "chest_dumbbell_fly",
@@ -57,7 +62,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/chest_dumbbell_fly.json"
+    "lottie": "ex/chest_dumbbell_fly.json",
+    "pattern": "chest_fly"
   },
   {
     "id": "chest_dumbbell_pullover",
@@ -67,7 +73,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/chest_dumbbell_pullover.json"
+    "lottie": "ex/chest_dumbbell_pullover.json",
+    "pattern": "chest_fly"
   },
   {
     "id": "chest_cable_crossover",
@@ -77,7 +84,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/chest_cable_crossover.json"
+    "lottie": "ex/chest_cable_crossover.json",
+    "pattern": "chest_fly"
   },
   {
     "id": "chest_cable_low_to_high_fly",
@@ -87,7 +95,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/chest_cable_low_to_high_fly.json"
+    "lottie": "ex/chest_cable_low_to_high_fly.json",
+    "pattern": "chest_fly"
   },
   {
     "id": "chest_machine_chest_press",
@@ -97,7 +106,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/chest_machine_chest_press.json"
+    "lottie": "ex/chest_machine_chest_press.json",
+    "pattern": "bench_press"
   },
   {
     "id": "chest_machine_pec_deck",
@@ -107,7 +117,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/chest_machine_pec_deck.json"
+    "lottie": "ex/chest_machine_pec_deck.json",
+    "pattern": "chest_fly"
   },
   {
     "id": "chest_bodyweight_push_up",
@@ -117,7 +128,8 @@
     "repsLow": 8,
     "repsHigh": 20,
     "setsDefault": 3,
-    "lottie": "ex/chest_bodyweight_push_up.json"
+    "lottie": "ex/chest_bodyweight_push_up.json",
+    "pattern": "push_up"
   },
   {
     "id": "chest_bodyweight_decline_push_up",
@@ -127,7 +139,8 @@
     "repsLow": 8,
     "repsHigh": 20,
     "setsDefault": 3,
-    "lottie": "ex/chest_bodyweight_decline_push_up.json"
+    "lottie": "ex/chest_bodyweight_decline_push_up.json",
+    "pattern": "push_up"
   },
   {
     "id": "back_barbell_deadlift",
@@ -137,7 +150,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/back_barbell_deadlift.json"
+    "lottie": "ex/back_barbell_deadlift.json",
+    "pattern": "deadlift"
   },
   {
     "id": "back_barbell_bent_over_row",
@@ -147,7 +161,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/back_barbell_bent_over_row.json"
+    "lottie": "ex/back_barbell_bent_over_row.json",
+    "pattern": "row"
   },
   {
     "id": "back_barbell_pendlay_row",
@@ -157,7 +172,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/back_barbell_pendlay_row.json"
+    "lottie": "ex/back_barbell_pendlay_row.json",
+    "pattern": "row"
   },
   {
     "id": "back_dumbbell_one_arm_row",
@@ -167,7 +183,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/back_dumbbell_one_arm_row.json"
+    "lottie": "ex/back_dumbbell_one_arm_row.json",
+    "pattern": "row"
   },
   {
     "id": "back_dumbbell_chest_supported_row",
@@ -177,7 +194,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/back_dumbbell_chest_supported_row.json"
+    "lottie": "ex/back_dumbbell_chest_supported_row.json",
+    "pattern": "row"
   },
   {
     "id": "back_cable_seated_row",
@@ -187,7 +205,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/back_cable_seated_row.json"
+    "lottie": "ex/back_cable_seated_row.json",
+    "pattern": "row"
   },
   {
     "id": "back_cable_lat_pulldown",
@@ -197,7 +216,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/back_cable_lat_pulldown.json"
+    "lottie": "ex/back_cable_lat_pulldown.json",
+    "pattern": "lat_pulldown"
   },
   {
     "id": "back_cable_straight_arm_pulldown",
@@ -207,7 +227,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/back_cable_straight_arm_pulldown.json"
+    "lottie": "ex/back_cable_straight_arm_pulldown.json",
+    "pattern": "lat_pulldown"
   },
   {
     "id": "back_cable_face_pull",
@@ -217,7 +238,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/back_cable_face_pull.json"
+    "lottie": "ex/back_cable_face_pull.json",
+    "pattern": "row"
   },
   {
     "id": "back_machine_assisted_pull_up",
@@ -227,7 +249,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/back_machine_assisted_pull_up.json"
+    "lottie": "ex/back_machine_assisted_pull_up.json",
+    "pattern": "pull_up"
   },
   {
     "id": "back_machine_t_bar_row",
@@ -237,7 +260,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/back_machine_t_bar_row.json"
+    "lottie": "ex/back_machine_t_bar_row.json",
+    "pattern": "row"
   },
   {
     "id": "back_bodyweight_pull_up",
@@ -247,7 +271,8 @@
     "repsLow": 8,
     "repsHigh": 20,
     "setsDefault": 3,
-    "lottie": "ex/back_bodyweight_pull_up.json"
+    "lottie": "ex/back_bodyweight_pull_up.json",
+    "pattern": "pull_up"
   },
   {
     "id": "back_bodyweight_inverted_row",
@@ -257,7 +282,8 @@
     "repsLow": 8,
     "repsHigh": 20,
     "setsDefault": 3,
-    "lottie": "ex/back_bodyweight_inverted_row.json"
+    "lottie": "ex/back_bodyweight_inverted_row.json",
+    "pattern": "row"
   },
   {
     "id": "shoulders_barbell_overhead_press",
@@ -267,7 +293,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/shoulders_barbell_overhead_press.json"
+    "lottie": "ex/shoulders_barbell_overhead_press.json",
+    "pattern": "overhead_press"
   },
   {
     "id": "shoulders_barbell_push_press",
@@ -277,7 +304,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/shoulders_barbell_push_press.json"
+    "lottie": "ex/shoulders_barbell_push_press.json",
+    "pattern": "overhead_press"
   },
   {
     "id": "shoulders_dumbbell_shoulder_press",
@@ -287,7 +315,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_dumbbell_shoulder_press.json"
+    "lottie": "ex/shoulders_dumbbell_shoulder_press.json",
+    "pattern": "overhead_press"
   },
   {
     "id": "shoulders_dumbbell_arnold_press",
@@ -297,7 +326,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_dumbbell_arnold_press.json"
+    "lottie": "ex/shoulders_dumbbell_arnold_press.json",
+    "pattern": "overhead_press"
   },
   {
     "id": "shoulders_dumbbell_lateral_raise",
@@ -307,7 +337,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_dumbbell_lateral_raise.json"
+    "lottie": "ex/shoulders_dumbbell_lateral_raise.json",
+    "pattern": "shoulder_lateral_raise"
   },
   {
     "id": "shoulders_dumbbell_front_raise",
@@ -317,7 +348,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_dumbbell_front_raise.json"
+    "lottie": "ex/shoulders_dumbbell_front_raise.json",
+    "pattern": "shoulder_front_raise"
   },
   {
     "id": "shoulders_dumbbell_rear_delt_fly",
@@ -327,7 +359,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_dumbbell_rear_delt_fly.json"
+    "lottie": "ex/shoulders_dumbbell_rear_delt_fly.json",
+    "pattern": "shoulder_lateral_raise"
   },
   {
     "id": "shoulders_cable_lateral_raise",
@@ -337,7 +370,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_cable_lateral_raise.json"
+    "lottie": "ex/shoulders_cable_lateral_raise.json",
+    "pattern": "shoulder_lateral_raise"
   },
   {
     "id": "shoulders_cable_rear_delt_fly",
@@ -347,7 +381,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_cable_rear_delt_fly.json"
+    "lottie": "ex/shoulders_cable_rear_delt_fly.json",
+    "pattern": "shoulder_lateral_raise"
   },
   {
     "id": "shoulders_cable_upright_row",
@@ -357,7 +392,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_cable_upright_row.json"
+    "lottie": "ex/shoulders_cable_upright_row.json",
+    "pattern": "row"
   },
   {
     "id": "shoulders_machine_shoulder_press",
@@ -367,7 +403,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_machine_shoulder_press.json"
+    "lottie": "ex/shoulders_machine_shoulder_press.json",
+    "pattern": "overhead_press"
   },
   {
     "id": "shoulders_machine_rear_delt_pec_deck",
@@ -377,7 +414,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_machine_rear_delt_pec_deck.json"
+    "lottie": "ex/shoulders_machine_rear_delt_pec_deck.json",
+    "pattern": "shoulder_lateral_raise"
   },
   {
     "id": "shoulders_bodyweight_pike_push_up",
@@ -387,7 +425,8 @@
     "repsLow": 8,
     "repsHigh": 20,
     "setsDefault": 3,
-    "lottie": "ex/shoulders_bodyweight_pike_push_up.json"
+    "lottie": "ex/shoulders_bodyweight_pike_push_up.json",
+    "pattern": "overhead_press"
   },
   {
     "id": "legs_barbell_back_squat",
@@ -397,7 +436,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/legs_barbell_back_squat.json"
+    "lottie": "ex/legs_barbell_back_squat.json",
+    "pattern": "squat"
   },
   {
     "id": "legs_barbell_front_squat",
@@ -407,7 +447,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/legs_barbell_front_squat.json"
+    "lottie": "ex/legs_barbell_front_squat.json",
+    "pattern": "squat"
   },
   {
     "id": "legs_barbell_romanian_deadlift",
@@ -417,7 +458,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/legs_barbell_romanian_deadlift.json"
+    "lottie": "ex/legs_barbell_romanian_deadlift.json",
+    "pattern": "deadlift"
   },
   {
     "id": "legs_barbell_hip_thrust",
@@ -427,7 +469,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/legs_barbell_hip_thrust.json"
+    "lottie": "ex/legs_barbell_hip_thrust.json",
+    "pattern": "squat"
   },
   {
     "id": "legs_dumbbell_goblet_squat",
@@ -437,7 +480,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/legs_dumbbell_goblet_squat.json"
+    "lottie": "ex/legs_dumbbell_goblet_squat.json",
+    "pattern": "squat"
   },
   {
     "id": "legs_dumbbell_walking_lunge",
@@ -447,7 +491,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/legs_dumbbell_walking_lunge.json"
+    "lottie": "ex/legs_dumbbell_walking_lunge.json",
+    "pattern": "lunge"
   },
   {
     "id": "legs_dumbbell_bulgarian_split_squat",
@@ -457,7 +502,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/legs_dumbbell_bulgarian_split_squat.json"
+    "lottie": "ex/legs_dumbbell_bulgarian_split_squat.json",
+    "pattern": "lunge"
   },
   {
     "id": "legs_cable_pull_through",
@@ -467,7 +513,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/legs_cable_pull_through.json"
+    "lottie": "ex/legs_cable_pull_through.json",
+    "pattern": "deadlift"
   },
   {
     "id": "legs_cable_glute_kickback",
@@ -477,7 +524,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/legs_cable_glute_kickback.json"
+    "lottie": "ex/legs_cable_glute_kickback.json",
+    "pattern": "leg_curl"
   },
   {
     "id": "legs_machine_leg_press",
@@ -487,7 +535,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/legs_machine_leg_press.json"
+    "lottie": "ex/legs_machine_leg_press.json",
+    "pattern": "squat"
   },
   {
     "id": "legs_machine_leg_extension",
@@ -497,7 +546,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/legs_machine_leg_extension.json"
+    "lottie": "ex/legs_machine_leg_extension.json",
+    "pattern": "leg_curl"
   },
   {
     "id": "legs_machine_hamstring_curl",
@@ -507,7 +557,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/legs_machine_hamstring_curl.json"
+    "lottie": "ex/legs_machine_hamstring_curl.json",
+    "pattern": "leg_curl"
   },
   {
     "id": "legs_bodyweight_air_squat",
@@ -517,7 +568,8 @@
     "repsLow": 8,
     "repsHigh": 20,
     "setsDefault": 3,
-    "lottie": "ex/legs_bodyweight_air_squat.json"
+    "lottie": "ex/legs_bodyweight_air_squat.json",
+    "pattern": "squat"
   },
   {
     "id": "arms_barbell_curl",
@@ -527,7 +579,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/arms_barbell_curl.json"
+    "lottie": "ex/arms_barbell_curl.json",
+    "pattern": "bicep_curl"
   },
   {
     "id": "arms_barbell_close_grip_bench_press",
@@ -537,7 +590,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 4,
-    "lottie": "ex/arms_barbell_close_grip_bench_press.json"
+    "lottie": "ex/arms_barbell_close_grip_bench_press.json",
+    "pattern": "tricep_extension"
   },
   {
     "id": "arms_dumbbell_curl",
@@ -547,7 +601,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/arms_dumbbell_curl.json"
+    "lottie": "ex/arms_dumbbell_curl.json",
+    "pattern": "bicep_curl"
   },
   {
     "id": "arms_dumbbell_hammer_curl",
@@ -557,7 +612,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/arms_dumbbell_hammer_curl.json"
+    "lottie": "ex/arms_dumbbell_hammer_curl.json",
+    "pattern": "bicep_curl"
   },
   {
     "id": "arms_dumbbell_incline_curl",
@@ -567,7 +623,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/arms_dumbbell_incline_curl.json"
+    "lottie": "ex/arms_dumbbell_incline_curl.json",
+    "pattern": "bicep_curl"
   },
   {
     "id": "arms_dumbbell_overhead_triceps_extension",
@@ -577,7 +634,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/arms_dumbbell_overhead_triceps_extension.json"
+    "lottie": "ex/arms_dumbbell_overhead_triceps_extension.json",
+    "pattern": "tricep_extension"
   },
   {
     "id": "arms_dumbbell_kickback",
@@ -587,7 +645,8 @@
     "repsLow": 6,
     "repsHigh": 12,
     "setsDefault": 3,
-    "lottie": "ex/arms_dumbbell_kickback.json"
+    "lottie": "ex/arms_dumbbell_kickback.json",
+    "pattern": "tricep_extension"
   },
   {
     "id": "arms_cable_triceps_pushdown",
@@ -597,7 +656,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/arms_cable_triceps_pushdown.json"
+    "lottie": "ex/arms_cable_triceps_pushdown.json",
+    "pattern": "tricep_extension"
   },
   {
     "id": "arms_cable_rope_hammer_curl",
@@ -607,7 +667,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/arms_cable_rope_hammer_curl.json"
+    "lottie": "ex/arms_cable_rope_hammer_curl.json",
+    "pattern": "bicep_curl"
   },
   {
     "id": "arms_cable_overhead_triceps_extension",
@@ -617,7 +678,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/arms_cable_overhead_triceps_extension.json"
+    "lottie": "ex/arms_cable_overhead_triceps_extension.json",
+    "pattern": "tricep_extension"
   },
   {
     "id": "arms_machine_preacher_curl",
@@ -627,7 +689,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/arms_machine_preacher_curl.json"
+    "lottie": "ex/arms_machine_preacher_curl.json",
+    "pattern": "bicep_curl"
   },
   {
     "id": "arms_machine_triceps_dip",
@@ -637,7 +700,8 @@
     "repsLow": 8,
     "repsHigh": 15,
     "setsDefault": 3,
-    "lottie": "ex/arms_machine_triceps_dip.json"
+    "lottie": "ex/arms_machine_triceps_dip.json",
+    "pattern": "tricep_extension"
   },
   {
     "id": "arms_bodyweight_diamond_push_up",
@@ -647,7 +711,8 @@
     "repsLow": 8,
     "repsHigh": 20,
     "setsDefault": 3,
-    "lottie": "ex/arms_bodyweight_diamond_push_up.json"
+    "lottie": "ex/arms_bodyweight_diamond_push_up.json",
+    "pattern": "push_up"
   },
   {
     "id": "core_bodyweight_plank",
@@ -657,7 +722,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_plank.json"
+    "lottie": "ex/core_bodyweight_plank.json",
+    "pattern": "plank"
   },
   {
     "id": "core_bodyweight_side_plank",
@@ -667,7 +733,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_side_plank.json"
+    "lottie": "ex/core_bodyweight_side_plank.json",
+    "pattern": "plank"
   },
   {
     "id": "core_bodyweight_hollow_hold",
@@ -677,7 +744,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_hollow_hold.json"
+    "lottie": "ex/core_bodyweight_hollow_hold.json",
+    "pattern": "plank"
   },
   {
     "id": "core_bodyweight_crunch",
@@ -687,7 +755,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_crunch.json"
+    "lottie": "ex/core_bodyweight_crunch.json",
+    "pattern": "crunch"
   },
   {
     "id": "core_bodyweight_bicycle_crunch",
@@ -697,7 +766,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_bicycle_crunch.json"
+    "lottie": "ex/core_bodyweight_bicycle_crunch.json",
+    "pattern": "crunch"
   },
   {
     "id": "core_bodyweight_leg_raise",
@@ -707,7 +777,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_leg_raise.json"
+    "lottie": "ex/core_bodyweight_leg_raise.json",
+    "pattern": "crunch"
   },
   {
     "id": "core_bodyweight_hanging_knee_raise",
@@ -717,7 +788,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_hanging_knee_raise.json"
+    "lottie": "ex/core_bodyweight_hanging_knee_raise.json",
+    "pattern": "crunch"
   },
   {
     "id": "core_bodyweight_mountain_climber",
@@ -727,7 +799,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_mountain_climber.json"
+    "lottie": "ex/core_bodyweight_mountain_climber.json",
+    "pattern": "plank"
   },
   {
     "id": "core_bodyweight_russian_twist",
@@ -737,7 +810,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_bodyweight_russian_twist.json"
+    "lottie": "ex/core_bodyweight_russian_twist.json",
+    "pattern": "russian_twist"
   },
   {
     "id": "core_dumbbell_russian_twist",
@@ -747,7 +821,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_dumbbell_russian_twist.json"
+    "lottie": "ex/core_dumbbell_russian_twist.json",
+    "pattern": "russian_twist"
   },
   {
     "id": "core_cable_woodchopper",
@@ -757,7 +832,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_cable_woodchopper.json"
+    "lottie": "ex/core_cable_woodchopper.json",
+    "pattern": "russian_twist"
   },
   {
     "id": "core_cable_crunch",
@@ -767,7 +843,8 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_cable_crunch.json"
+    "lottie": "ex/core_cable_crunch.json",
+    "pattern": "crunch"
   },
   {
     "id": "core_machine_ab_crunch",
@@ -777,6 +854,7 @@
     "repsLow": 10,
     "repsHigh": 25,
     "setsDefault": 3,
-    "lottie": "ex/core_machine_ab_crunch.json"
+    "lottie": "ex/core_machine_ab_crunch.json",
+    "pattern": "crunch"
   }
 ]

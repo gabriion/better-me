@@ -42,6 +42,7 @@ import com.gabriion.betterme.domain.gym.BuiltWorkoutDay
 import com.gabriion.betterme.domain.model.Exercise
 import com.gabriion.betterme.ui.gym.components.ExerciseDetailSheet
 import com.gabriion.betterme.ui.gym.components.ExerciseRow
+import com.gabriion.betterme.ui.gym.components.LottiePreview
 import com.gabriion.betterme.ui.gym.components.PlanBuilderSheet
 import com.gabriion.betterme.ui.gym.components.WorkoutHistoryRow
 import java.time.Instant
@@ -225,16 +226,30 @@ private fun DayPlanCard(dayNumber: Int, day: BuiltWorkoutDay) {
             )
             HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
             day.exercises.forEachIndexed { idx, planned ->
-                Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
-                    Text(planned.exercise.name, style = MaterialTheme.typography.titleSmall)
-                    val repsText = if (planned.repsLow == planned.repsHigh)
-                        "${planned.repsLow} reps"
-                    else
-                        "${planned.repsLow}–${planned.repsHigh} reps"
-                    Text(
-                        text = "${planned.sets} sets × $repsText",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(planned.exercise.name, style = MaterialTheme.typography.titleSmall)
+                        val repsText = if (planned.repsLow == planned.repsHigh)
+                            "${planned.repsLow} reps"
+                        else
+                            "${planned.repsLow}–${planned.repsHigh} reps"
+                        Text(
+                            text = "${planned.sets} sets × $repsText",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    LottiePreview(
+                        assetPath = planned.exercise.lottie,
+                        size = 48.dp,
+                        muscleGroup = planned.exercise.muscleGroup,
+                        pattern = planned.exercise.pattern,
                     )
                 }
                 if (idx < day.exercises.lastIndex) {

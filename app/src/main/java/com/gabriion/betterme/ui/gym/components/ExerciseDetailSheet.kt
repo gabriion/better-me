@@ -49,6 +49,7 @@ fun ExerciseDetailSheet(
                 assetPath = exercise.lottie,
                 size = 140.dp,
                 muscleGroup = exercise.muscleGroup,
+                pattern = exercise.pattern,
             )
         }
         Text(exercise.name, style = MaterialTheme.typography.headlineSmall)

@@ -45,7 +45,11 @@ fun ExerciseDetailSheet(
                 .height(160.dp),
             contentAlignment = Alignment.Center,
         ) {
-            LottiePreview(assetPath = exercise.lottie, size = 140.dp)
+            LottiePreview(
+                assetPath = exercise.lottie,
+                size = 140.dp,
+                muscleGroup = exercise.muscleGroup,
+            )
         }
         Text(exercise.name, style = MaterialTheme.typography.headlineSmall)
         Text(

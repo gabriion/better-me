@@ -30,7 +30,7 @@ fun ExerciseRow(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        LottiePreview(assetPath = exercise.lottie)
+        LottiePreview(assetPath = exercise.lottie, muscleGroup = exercise.muscleGroup)
         Column(
             modifier = Modifier.weight(1f),
             verticalArrangement = Arrangement.spacedBy(2.dp),
